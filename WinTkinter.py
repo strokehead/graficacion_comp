@@ -25,6 +25,8 @@ win.grid_columnconfigure(2, weight=2)
 
 titleW = tkinter.Label(win, text= "ALGORITMOS DE LÍNEA", font= "Arial 20")
 
+lblX = tkinter.Label(win, text= "X", font= "Helvetica 10")
+lblY = tkinter.Label(win, text= "Y", font= "Helvetica 10")
 lblP1 = tkinter.Label(win, text= "Punto 1", font= "Helvetica 10")
 lblP2 = tkinter.Label(win, text= "Punto 2", font= "Helvetica 10")
 
@@ -44,15 +46,17 @@ buttonB = tkinter.Button(win, text = "De Bresenham", font= "Helvetica 14", heigh
 #titleW.grid  (row = 0, column= 0, columnspan=2, pady = (30,0))
 titleW.grid  (row = 0, column= 0, columnspan=3, pady = (30,10))#, sticky=tkinter.EW)
 
-lblP1.grid  (row= 1, column= 0)
-entryX1.grid(row= 1, column= 1, sticky='E')
-entryY1.grid(row= 1, column= 2, sticky='W')
-lblP2.grid  (row= 2, column= 0)
-entryX2.grid(row= 2, column= 1, sticky='E')
-entryY2.grid(row= 2, column= 2, sticky='W')
+lblX.grid   (row= 1, column= 1)
+lblY.grid   (row= 1, column= 2)
+lblP1.grid  (row= 2, column= 0, sticky='E')
+entryX1.grid(row= 2, column= 1, sticky='E')
+entryY1.grid(row= 2, column= 2, sticky='W')
+lblP2.grid  (row= 3, column= 0, sticky='E')
+entryX2.grid(row= 3, column= 1, sticky='E')
+entryY2.grid(row= 3, column= 2, sticky='W')
 
-buttonE.grid (row = 3, column= 0, columnspan=3, pady = (70,20))
-buttonB.grid (row = 4, column= 0, columnspan=3)
+buttonE.grid (row = 4, column= 0, columnspan=3, pady = (70,20))
+buttonB.grid (row = 5, column= 0, columnspan=3)
 #frame.place(relx)
 
 win.mainloop()
