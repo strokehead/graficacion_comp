@@ -16,16 +16,13 @@ paint.color = px.Color(1, 0, 0, 1)
 ctx = image.new_context()
 ctx.fill_style = paint
 
-points = bresenham(25, 8, 35, 8)
-draw_line(ctx, points)
+draw_line(ctx, line_equation_fx(25, 10, 35, 18))
+draw_line(ctx, line_equation_fx(0, 0, 25, 34))
+draw_line(ctx, line_equation_fx(10, 30, 15, 54))
+draw_line(ctx, line_equation_fx(25, 75, 45, 14))
+draw_line(ctx, line_equation_fx(25, 75, 85, 64))
+draw_line(ctx, line_equation_fx(15, 56, 20, 56))
 
-points = bresenham(0, 0, 120, 120)
-draw_line(ctx, points)
+draw_line(ctx, line_equation_fy(15, 30, 20, 54))
 
-points = bresenham(25, 10, 35, 18)
-draw_line(ctx, points)
-
-points = bresenham(0, 0, 25, 34)
-draw_line(ctx, points)
-
-image.write_file("bresenham.png")
+image.write_file("output.png")
