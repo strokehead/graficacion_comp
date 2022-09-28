@@ -40,6 +40,6 @@ paint.color = px.parse_color("#192965")
 #draw_line(ctx, points)
 
 ctx.fill_style = paint
-points = bresenham(6, 9, 25, 34)
+points = line_equation_fx(6, 9, 25, 34)
 draw_line(ctx, points)
 image.write_file("bresenham.png")
