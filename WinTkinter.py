@@ -11,6 +11,7 @@ def botonEc():
     winEc = tkinter.Toplevel()
     winEc.title("Algoritmo de ecuación cartesiana")
     winEc.geometry("400x400")
+    
 
 def botonBr():
     winBr = tkinter.Toplevel()
@@ -35,10 +36,10 @@ valueY1 = tkinter.IntVar()
 valueX2 = tkinter.IntVar()
 valueY2 = tkinter.IntVar()
 
-entryX1 = tkinter.Entry(win, textvariable=valueX1)
-entryY1 = tkinter.Entry(win, textvariable=valueY1)
-entryX2 = tkinter.Entry(win, textvariable=valueX2)
-entryY2 = tkinter.Entry(win, textvariable=valueY2)
+entryX1 = tkinter.Entry(win, textvariable=valueX1, width=16)
+entryY1 = tkinter.Entry(win, textvariable=valueY1, width=16)
+entryX2 = tkinter.Entry(win, textvariable=valueX2, width=16)
+entryY2 = tkinter.Entry(win, textvariable=valueY2, width=16)
 
 buttonE = tkinter.Button(win, text = "Ecuación cartesiana", font= "Helvetica 14", height= "2", width= "20")
 buttonB = tkinter.Button(win, text = "De Bresenham", font= "Helvetica 14", height= "2", width= "20")
@@ -47,7 +48,7 @@ buttonB = tkinter.Button(win, text = "De Bresenham", font= "Helvetica 14", heigh
 titleW.grid  (row = 0, column= 0, columnspan=3, pady = (30,10))#, sticky=tkinter.EW)
 
 lblX.grid   (row= 1, column= 1)
-lblY.grid   (row= 1, column= 2)
+lblY.grid   (row= 1, column= 2, sticky='W')
 lblP1.grid  (row= 2, column= 0, sticky='E')
 entryX1.grid(row= 2, column= 1, sticky='E')
 entryY1.grid(row= 2, column= 2, sticky='W')
