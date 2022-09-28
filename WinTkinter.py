@@ -6,6 +6,17 @@ win = tkinter.Tk()
 win.title("Graficación por computadora")
 win.geometry("500x500")
 
+def botonEc():
+    winEc = tkinter.Toplevel()
+    winEc.title("Algoritmo de ecuación cartesiana")
+    winEc.geometry("400x400")
+
+def botonBr():
+    winBr = tkinter.Toplevel()
+    winBr.title("Algoritmo de Bresenham")
+    winBr.geometry("400x400")
+    
+
 #win.grid_rowconfigure(0, weight=3)
 win.grid_columnconfigure(0, weight=1)
 
