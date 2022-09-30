@@ -15,10 +15,8 @@ winMain = tk.Tk()
 
 # winMain.state('zoomed')
 winMain.title("Graficación por computadora")
-# winMain.geometry("1600x1000")
 winMain.geometry("1000x800")
 winMain.minsize(500,500)
-# winMain.config(relief = "sunken")
 
 #winMain.grid_rowconfigure(0, weight=3)
 # winMain.grid_columnconfigure(0, weight=1)
@@ -27,20 +25,33 @@ winMain.minsize(500,500)
 
 titleW = tk.Label(winMain, text= "ALGORITMOS DE LÍNEA", font= "Arial 20")
 
-# iconSquare   = tk.PhotoImage(file=r"icons/square.png")
 iconSquare   = iconR("square")
-
-# iconCircle   = tk.PhotoImage(file=r"icons/circle.png")
 iconCircle   = iconR("circle")
-
-# iconTriangle   = tk.PhotoImage(file=r"icons/triangle.png")
 iconTriangle = iconR("triangle")
 
-frameMenu    = tk.Frame(winMain, height = 20)
-frameButtons = tk.Frame(winMain, width  = 30, bg = "gray", relief = "solid", highlightcolor = "gray", highlightthickness = 1)
-# frameButtons.config(relief="solid")
-# frameButtons.config(bd = 1, )
-# frameButtons.config(wi)
+menus = tk.Menu()
+menuArchive = tk.Menu(menus, tearoff = False)
+menuArchive.add_command(
+    label = "Nuevo",
+    # command=
+)
+menuArchive.add_command(
+    label = "Guardar",
+    # command=
+)
+
+menuArchive.add_separator()
+menuArchive.add_command(label = "Salir", command = winMain.destroy)
+
+menuOptions = tk.Menu(menus, tearoff = False)
+
+menus.add_cascade(menu = menuArchive, label = "Archivo")
+menus.add_cascade(menu = menuOptions, label = "Opciones")
+
+winMain.config(menu = menus)
+
+frameMenu    = tk.Frame(winMain, height = 20, relief = "raised", borderwidth = 1)
+frameButtons = tk.Frame(winMain, width  = 30, relief = "raised", borderwidth = 1)
 
 buttonS = tk.Button(frameButtons, image = iconSquare)
 buttonC = tk.Button(frameButtons, image = iconCircle)
@@ -48,9 +59,9 @@ buttonT = tk.Button(frameButtons, image = iconTriangle)
 
 frameMenu.grid(row = 0, column = 0)
 frameButtons.grid(row = 1, column = 0)
-# frameButtons.pack()
-buttonS.grid(row = 0, column = 0, padx = (0,3))
-buttonC.grid(row = 1, column = 0, padx = (0,3))
-buttonT.grid(row = 2, column = 0, padx = (0,3))
+
+buttonS.grid(row = 0, column = 0, padx = (0,3), pady = (3,3))
+buttonC.grid(row = 1, column = 0, padx = (0,3), pady = (3,3))
+buttonT.grid(row = 2, column = 0, padx = (0,3), pady = (3,3))
 
 winMain.mainloop()
