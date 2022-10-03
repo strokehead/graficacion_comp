@@ -2,9 +2,9 @@ from tkinter import Canvas, mainloop
 from pip import main
 from tkinter import *
 
-
 #from util.color import Color
 
+'''clase para poder examinar color de 1 pixel en especifico'''
 
 class ImageUtils:
 
@@ -36,6 +36,7 @@ class ImageUtils:
         return "WHITE"
 
 
+'''clase para frame de canvas, dibujar, pintar'''
 class drawA():
     def __init__(self, master : Tk, wd, ht):
         self.frame = Frame(master)
