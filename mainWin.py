@@ -4,6 +4,7 @@ import tkinter as tk
 from typing_extensions import IntVar
 from PIL import Image, ImageTk
 
+import square_options as isp
 
 import drawArea as da
 
@@ -18,14 +19,16 @@ def iconxR(nameIcon):
 def options_square():
     #print("expresionado")
     winMain.withdraw()
-    win = tk.Toplevel(winMain)
+    aux = isp.popup_sqo([],winMain)
+    aux.top_level.wait_window()
+    '''win = tk.Toplevel(winMain)
     win.geometry('480x400')
     win.configure(background='red')
     e = tk.Label(win, text='Hola', fg='black')
     e.pack(padx=5, pady=5, ipadx=5, ipady=5, fill=tk.X)
     boton = tk.Button(win, text='Aceptar', command=win.destroy)
     boton.pack(side=tk.TOP)
-
+    win.protocol('j', win.destroy())'''
     pass
 
 
