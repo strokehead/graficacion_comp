@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
-class popup_sqo(Frame):
+class popup_cro(Frame):
     def __init__(self, out_val:list, master: Tk, *args, **kargs):
         self.out = out_val
         super().__init__(master=master, *args, **kargs)
@@ -20,18 +20,13 @@ class popup_sqo(Frame):
     
     def puntos_input(self):
         self.entt_impo = Frame(master=self.top_level)
-        self.a = Label(master=self.entt_impo, text='Punto A:')
-        self.a.pack(side=LEFT)
+        Label(master=self.entt_impo, text='Punto A:').pack(side=LEFT)
         self.a_in_x = Entry(master=self.entt_impo)
         self.a_in_x.pack(side=LEFT)
         self.a_in_y = Entry(master=self.entt_impo)
         self.a_in_y.pack(side=LEFT)
-        self.b = Label(master=self.entt_impo, text='Punto B:')
-        self.b.pack(side=LEFT)
-        self.b_in_x = Entry(master=self.entt_impo)
-        self.b_in_x.pack(side=LEFT)
-        self.b_in_y = Entry(master=self.entt_impo)
-        self.b_in_y.pack(side=LEFT)
+        Label(master=self.entt_impo, text='radio:').pack(side=LEFT)
+        self.r = Entry(master=self.entt_impo)
         self.entt_impo.pack(side=TOP)
 
     def grosor_color_frame(self):
@@ -51,7 +46,7 @@ class popup_sqo(Frame):
         self.seg = Frame(master=self.top_level)
         Label(master=self.seg, text='Segmentado').pack(side=LEFT)
 
-        self.segmentado = Checkbutton(master=self.seg, onvalue=1, offvalue=0).pack(side=LEFT)
+        self.segmentado = Checkbutton(master=self.seg).pack(side=LEFT)
         
         self.seg.pack(side=TOP)
 
@@ -65,8 +60,7 @@ class popup_sqo(Frame):
         try:
             self.out.append(int(self.a_in_x.get()))
             self.out.append(int(self.a_in_y.get()))
-            self.out.append(int(self.b_in_x.get()))
-            self.out.append(int(self.b_in_y.get()))
+            self.out.append(int(self.r.get()))
             app = []
             app.append(int(self.grosor_out))
             app.append(self.color)

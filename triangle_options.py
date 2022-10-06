@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
-class popup_sqo(Frame):
+class popup_tro(Frame):
     def __init__(self, out_val:list, master: Tk, *args, **kargs):
         self.out = out_val
         super().__init__(master=master, *args, **kargs)
@@ -32,6 +32,12 @@ class popup_sqo(Frame):
         self.b_in_x.pack(side=LEFT)
         self.b_in_y = Entry(master=self.entt_impo)
         self.b_in_y.pack(side=LEFT)
+        self.c = Label(master=self.entt_impo, text='Punto C:')
+        self.c.pack(side=LEFT)
+        self.c_in_x = Entry(master=self.entt_impo)
+        self.c_in_x.pack(side=LEFT)
+        self.c_in_y = Entry(master=self.entt_impo)
+        self.c_in_y.pack(side=LEFT)
         self.entt_impo.pack(side=TOP)
 
     def grosor_color_frame(self):
@@ -51,7 +57,7 @@ class popup_sqo(Frame):
         self.seg = Frame(master=self.top_level)
         Label(master=self.seg, text='Segmentado').pack(side=LEFT)
 
-        self.segmentado = Checkbutton(master=self.seg, onvalue=1, offvalue=0).pack(side=LEFT)
+        self.segmentado = Checkbutton(master=self.seg).pack(side=LEFT)
         
         self.seg.pack(side=TOP)
 
@@ -67,6 +73,8 @@ class popup_sqo(Frame):
             self.out.append(int(self.a_in_y.get()))
             self.out.append(int(self.b_in_x.get()))
             self.out.append(int(self.b_in_y.get()))
+            self.out.append(int(self.c_in_x.get()))
+            self.out.append(int(self.c_in_y.get()))
             app = []
             app.append(int(self.grosor_out))
             app.append(self.color)
