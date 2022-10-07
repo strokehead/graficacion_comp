@@ -15,6 +15,11 @@ class View(Frame):
         line_equation_fx(canvas, 45, 13, 720, 113)
         line_equation_fy(canvas, 45, 33, 720, 133)
         line_bresenham(canvas, 45, 53, 720, 153)
+        line_dda(canvas, 45, 73, 720, 173)
+        line_dda(canvas, 45, 173, 720, 73)
+        line_dda(canvas, 10, 173, 10, 13)
+        line_dda(canvas, 10, 27, 50, 27)
+        line_bresenham(canvas, 10, 17, 50, 17)
 
         r = 1
         while r <= 100:

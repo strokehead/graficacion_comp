@@ -1,4 +1,3 @@
-from tkinter import Canvas
 from math import cos, sin, pi
 from g_util import *
 
